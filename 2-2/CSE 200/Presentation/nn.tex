@@ -1,0 +1,635 @@
+\section{Introduction}
+
+
+
+\begin{frame}{Background}
+    \begin{columns}
+        % Column 1: Text
+        \column{0.6\textwidth}
+        \textbf{\textit{Generative AI tools like ChatGPT are revolutionizing various domains, including software engineering. But can we trust their responses?}}
+        
+        % Column 2: Image
+        \column{0.4\textwidth}
+        \includegraphics[width=\textwidth]{image2.jpg}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Background}
+    \vspace{0.5cm}
+    \textit{Developers are increasingly using ChatGPT for SE tasks like library selection}
+    \vspace{0.5cm}
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{0.6\textwidth}{!}{% Adjusted the size to make it bigger
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\Large]        
+        \draw (10.75,11.5) rectangle (10.75,11.5);
+        \draw [fill={rgb,255:red,209; green,240; blue,255}, rounded corners=7.2] (9.75,12.25) rectangle (14.5,11);
+        \draw [fill={rgb,255:red,209; green,240; blue,255}, rounded corners=7.2] (9.5,9.5) rectangle (14.5,8.25);
+        \draw [fill={rgb,255:red,209; green,240; blue,255}, rounded corners=6.0] (6,6.25) rectangle (9,5);
+        \draw [fill={rgb,255:red,209; green,240; blue,255}, rounded corners=6.0] (10.75,6.25) rectangle (13.5,5);
+        \draw [fill={rgb,255:red,209; green,240; blue,255}, rounded corners=6.0] (15.25,6.25) rectangle (18,5);
+        \draw [short] (7.5,6.25) -- (7.5,7.25);
+        \draw [short] (12,6.25) -- (12,7.25);
+        \draw [short] (8.25,7.25) -- (16.75,7.25);
+        \draw [short] (16.75,7.25) -- (16.75,6.25);
+        \draw [short] (7.5,7.25) -- (8.25,7.25);
+        \node at (12.15,11.6) {Driver Code};
+        \node at (12,8.9) {Framework};
+        \node at (7.5,5.5) {Library};
+        \node at (12.15,5.5) {Library};
+        \node at (16.65,5.5) {Library};
+        \node [font=\small] at (12.25,10.25) {Code uses framework};
+        \node [font=\small] at (12,7.5) {Framework contains library};
+        \draw [short] (12,9.5) -- (12,10);
+        \draw [->, >=Stealth] (12,10.5) -- (12,11);
+        \draw [->, >=Stealth] (12,8) -- (12,8.25);
+        \draw [short] (12,8) -- (12,7.75);
+        \end{circuitikz}
+        }%
+        \label{meumeu}
+    \end{figure}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Overview}
+    \begin{figure}[!ht]
+        \centering
+        \resizebox{0.55\textwidth}{!}{%
+        \begin{circuitikz}
+        \tikzstyle{every node}=[font=\LARGE]
+        \node [font=\LARGE] at (2.75,10.25) {};
+        \draw (6,11.75) to[short] (6,4.25);
+        \draw [->, >=Stealth] (6,4.25) -- (8.25,4.25);
+        \node [font=\Large] at (10.75,12.75) {\underline{Phase 1}};
+        \node [font=\large] at (10.75,12) {Survey to learn };
+        \node [font=\large] at (10.75,11.5) {preferences and };
+        \draw  (10.75,12) circle (2.25cm);
+        \node [font=\large, rotate around={-360:(0,0)}] at (10.75,11) {concerns};
+        \draw [->, >=Stealth] (6,11.75) -- (8.5,11.75);
+        \draw [->, >=Stealth] (4.75,8) -- (6,8);
+        \node [font=\Large] at (10.75,5.25) {\underline{Phase 2}};
+        \node [font=\large] at (10.75,4.5) {Developed a tool};
+        \node [font=\large] at (10.85,3.5) {ChatGPT Incorrectness};
+        \node [font=\large] at (10.75,4) {called CID aka};
+        \node [font=\large, rotate around={-360:(0,0)}] at (10.75,3) {Detector};
+        \draw  (10.75,4.25) circle (2.5cm);
+        \draw [ fill={rgb,255:red,204; green,245; blue,255} , rounded corners = 11.4, rotate around={-360:(2.75, 8)}] (0.75,8.75) rectangle (4.75,7.25);
+        \node [font=\LARGE] at (2.75,8) {Research};
+        \end{circuitikz}
+        }%
+        \label{meumeu}
+        \end{figure}
+\end{frame}
+
+%------------------------------------------------
+\setbeamercovered{transparent}
+\begin{frame}
+    \frametitle{Overview}
+    \begin{itemize}
+        \item Focus on software library selection as a case study. \pause
+        \item Need for understanding how developers use ChatGPT and their concerns. \pause
+        \item Desire for automated tools to detect incorrectness in ChatGPT's outputs.
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\section{Survey of Software Developers}
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Survey Overview}
+    \begin{itemize}
+        \item Conducted a survey with 135 SE practitioners.
+        \item Aimed to answer three Research Questions (RQs):
+        \begin{itemize}
+            \item \textbf{RQ1:} Why do software developers use ChatGPT?
+            \item \textbf{RQ2:} How much do developers rely on ChatGPT responses?
+            \item \textbf{RQ3:} How do developers verify ChatGPT responses?
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%-----------------------------
+
+\begin{frame}
+    \frametitle{Participant Demographics (Current Profession)}
+    \vspace{0.5cm}
+    \begin{tikzpicture}
+        \pie[
+            text=legend,
+            radius=2.5,
+            color={red!40, orange!40, green!40, yellow!40},
+            before number=,
+            after number=,
+            style=drop shadow,
+            sum=135
+        ]{
+            113/Software Engineer (Total 113),
+            15/Manager (Total 15),
+            4/Executive (Total 4),
+            3/Non-Tech (Total 3)
+        }
+        \end{tikzpicture}
+        
+        \vspace{1em} % Add some vertical spacing
+        \begin{center}
+            \textbf{Total Participants = 135}
+        \end{center}
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Participant Demographics (Years of Experience)}
+    \vspace{0.5cm}
+    \begin{tikzpicture}
+        \pie[
+            text=legend,
+            radius=2.5,
+            color={blue!40, red!40, orange!40, green!40, yellow!40},
+            before number=,
+            after number=,
+            style=drop shadow,
+            sum=135
+        ]{
+            64/0-5 years,
+            39/5-10 years,
+            23/11-15 years,
+            7/16-20 years,
+            2/21-24 years
+        }
+        \end{tikzpicture}
+        
+        \vspace{1em} % Add some vertical spacing
+        \begin{center}
+            \textbf{Total Participants = 135}
+        \end{center}
+\end{frame}
+
+
+
+%--------------------------------------------
+
+\begin{frame}
+    \frametitle{Survey Questions}
+    {\scriptsize
+        \input{tables/tables-survey_questions_on_chatgpt.tex}
+    }
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Reasons to use ChatGPT (RQ1)}
+    \textbf{The answers to the following questions help us to find the answer to Why developers used ChatGPT}
+    \vspace{1cm}
+    \begin{enumerate}
+        \item Did you use ChatGPT?
+        \item In general, which of the cases you used it for?
+        \item As a software professional, how did you or can you use it? 
+        \item How would you describe your experience with using it so far? 
+    \end{enumerate}
+
+\end{frame}
+
+%--------------------------
+\begin{frame}
+    \frametitle{Reasons to use ChatGPT (RQ1)}
+    \vspace{2em}
+    \textbf{1. Did you use ChatGPT}
+    \vspace{1cm}
+    \begin{tikzpicture}
+        \begin{axis}[
+        xbar,
+        xmin=0,
+        xmax=100,
+        width=0.8\linewidth,
+        height=0.35\textheight,
+        enlarge y limits=0.15,
+        symbolic y coords={
+        YES,NO
+        },
+        ytick=data,
+            y tick label style={align=left, font=\footnotesize}, % Correct alignment
+            nodes near coords,
+            nodes near coords align={horizontal},
+            axis lines*=left,
+            y axis line style={opacity=0},
+            x axis line style={opacity=0},
+            tickwidth=0pt,
+            enlarge x limits=0.02,
+        ]
+        \addplot[fill=red!80!white] coordinates {
+        (98.52,YES)
+        (1.48,NO)
+        };
+        \end{axis}
+        \end{tikzpicture}
+\end{frame}
+
+
+%--------------------------
+
+\begin{frame}
+    \frametitle{Reasons to use ChatGPT (RQ1)}
+    \vspace{1em}
+    \textbf{2. In general, which of the cases you used it for?}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            xmin=0,
+            xmax=100,
+            width=\linewidth,
+            height=\textheight,
+            bar width=6pt,
+            enlarge y limits=0.15,
+            symbolic y coords={
+                Others,
+                {Research for \\ Product Dev.},
+                {Data Collection},
+                Decision Making,
+                Content Creation,
+                {Learning \& \\ Knowledge Acq.},
+                As a Search Engine,
+                Just for Fun
+            },
+            ytick=data,
+            y tick label style={align=left, font=\footnotesize},
+            nodes near coords,
+            nodes near coords align={horizontal},
+            axis lines*=left,
+            y axis line style={opacity=0},
+            x axis line style={opacity=0},
+            tickwidth=0pt,
+            enlarge x limits=0.02,
+        ]
+        % Bars appear incrementally
+        
+        \only<1>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun)};}
+        \only<2>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine)};}
+        \only<3>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.})};}
+        \only<4>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.}) (46.67,Content Creation)};}
+        \only<5>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.}) (46.67,Content Creation) (48.15,Decision Making)};}
+        \only<6>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.}) (46.67,Content Creation) (48.15,Decision Making) (27.41,{Data Collection})};}
+        \only<7>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.}) (46.67,Content Creation) (48.15,Decision Making) (27.41,{Data Collection}) (28.15,{Research for \\ Product Dev.})};}
+        \only<8>{\addplot[fill=blue!80!white] coordinates {(42.22,Just for Fun) (79.26,As a Search Engine) (61.48,{Learning \& \\ Knowledge Acq.}) (46.67,Content Creation) (48.15,Decision Making) (48.15,Decision Making) (27.41,{Data Collection}) (28.15,{Research for \\ Product Dev.}) (1.32,Others)};}
+        \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+
+%------------------------
+
+
+\begin{frame}
+    \frametitle{Reasons to use ChatGPT (RQ1)}
+    \vspace{1em}
+    \textbf{3.  As a software professional, how did you or can you use it?}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            xmin=0,
+            xmax=100,
+            width=\linewidth,
+            height=\textheight,
+            bar width=6pt,
+            enlarge y limits=0.15,
+            symbolic y coords={
+                {Code Generation \\ and Optimization},
+                {Code Analysis \\ and review},
+                {Solving \\ Support},
+                {Alternative \\ Approaches},
+                {Library \\ Selection},Others
+            },
+            ytick=data,
+            y tick label style={align=left, font=\footnotesize},
+            nodes near coords,
+            nodes near coords align={horizontal},
+            axis lines*=left,
+            y axis line style={opacity=0},
+            x axis line style={opacity=0},
+            tickwidth=0pt,
+            enlarge x limits=0.02,
+        ]
+        % Bars appear incrementally
+        
+        \only<1>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization})};}
+        \only<2>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization}) (52.59,{Code Analysis \\ and review})};}
+        \only<3>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization}) (52.59,{Code Analysis \\ and review}) (86,{Solving \\ Support})};}
+        \only<4>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization}) (52.59,{Code Analysis \\ and review}) (86,{Solving \\ Support}) (73.33,{Alternative \\ Approaches})};}
+        \only<5>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization}) (52.59,{Code Analysis \\ and review}) (86,{Solving \\ Support}) (73.33,{Alternative \\ Approaches}) (46.67,{Library \\ Selection})};}
+        \only<6>{\addplot[fill=green!80!white] coordinates {(60,{Code Generation \\ and Optimization}) (52.59,{Code Analysis \\ and review}) (86,{Solving \\ Support}) (73.33,{Alternative \\ Approaches}) (46.67,{Library \\ Selection}) (2,Others)};}
+        \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+%---------------------------
+
+\begin{frame}
+    \frametitle{Reasons to use ChatGPT (RQ1)}
+    \vspace{1em}
+    \textbf{4. How would you describe your experience with using it so far?}
+    \begin{tikzpicture}
+        \begin{axis}[
+            xbar,
+            xmin=0,
+            xmax=100,
+            width=\linewidth,
+            height=0.7\textheight,
+            bar width=6pt,
+            enlarge y limits=0.15,
+            symbolic y coords={
+                Exciting,
+                {Tech \\ Marvel},
+                Unreliable,
+                Over-hyped,
+                Suspicious
+            },
+            ytick=data,
+            y tick label style={align=left, font=\footnotesize},
+            nodes near coords,
+            nodes near coords align={horizontal},
+            axis lines*=left,
+            y axis line style={opacity=0},
+            x axis line style={opacity=0},
+            tickwidth=0pt,
+            enlarge x limits=0.02,
+        ]
+        \addplot[fill=purple!80!white] coordinates {
+            (68.15,Exciting)
+            (42.22,{Tech \\ Marvel})
+            (34,Unreliable)
+            (19.26,Over-hyped)
+            (9.63,Suspicious)
+        };
+        \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+%----------------------------
+
+\begin{frame}
+    \frametitle{Summarizing Key Findings for RQ1}
+    \begin{itemize}
+        \item \textbf{Usage Purposes:}
+        \begin{itemize}
+            \item Code generation and optimization.
+            \item Problem-solving support.
+            \item Exploring alternative approaches.
+            \item Library selection.
+        \end{itemize}
+        \item \textbf{Experience:}
+        \begin{itemize}
+            \item Excitement and recognition of technological advancement.
+            \item Concerns about reliability and overhyped expectations.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+%------------------------------------------------
+
+
+\begin{frame}
+    \frametitle{Concerns About ChatGPT Responses (RQ2)}
+    \textbf{We asked the following questions to the participants to find out how reliable ChatGPT is}
+    \vspace{1cm}
+    \begin{enumerate}
+        \item How much do you rely on the content/response of ChatGPT?
+        \item Have you considered using ChatGPT to select or compare software
+        libraries? Please share the pros and cons?
+    \end{enumerate}
+
+\end{frame}
+
+%----------------------------------------------
+\begin{frame}
+    \frametitle{Concerns About ChatGPT Responses (RQ2)}
+    \textbf{1. How much do you rely on the content/response of ChatGPT?}
+    \vspace{1cm}
+    \begin{tikzpicture}
+        \pie[
+            text=legend,
+            radius=1.9,
+            color={blue!40, red!40, orange!40, green!40, yellow!40},
+            before number=,
+            after number={\%},
+            style=drop shadow,
+            explode=0.07
+        ]{
+            5.2/Not Reliable At All,
+            54.9/Somewhat Reliable:Need Validation,
+            35.6/Somewhat Reliable:Need Augmentation,
+            3.7/Others
+        }
+        \end{tikzpicture}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Concerns About ChatGPT Responses (RQ2)}
+    \vspace{1em}
+    \textbf{2. Have you considered using ChatGPT to select or compare
+    software libraries? Please share the pros and cons?}
+    \vspace{0.5em}
+    \begin{itemize}
+        \item PROS :
+        \begin{enumerate}
+            \item Efficient Access to Information
+            \item Initial Idea Generation
+            \item Personalized Recommendations
+            \item Time-Saving
+        \end{enumerate}
+        \vspace{0.5em}
+        \item CONS :
+        \begin{enumerate}
+            \item Lack of Up-to-dateness
+            \item Contextual Understanding Challenges
+            \item Reliability Concerns
+            \item Dependence on Prompt
+            \item Not Sufficient for Decision-Making
+            \item Bias of Training Data
+        \end{enumerate}
+        
+    \end{itemize}
+    
+\end{frame}
+
+
+%--------------------------------
+\begin{frame}
+    \frametitle{Pros and Cons for Library Selection (RQ2)}
+    \vspace{0.5em}
+
+    \begin{minipage}{\textwidth}
+        \textbf{Pros : Total 45 responses}
+        \centering
+        \begin{tikzpicture}
+            \pie[text=legend, radius=1.25, sum=45, style=drop shadow]{
+                22/Efficient Access to Info,
+                10/Initial Idea Generation,
+                3/Personalized Recommendations,
+                10/Time Saving
+            }
+        \end{tikzpicture}
+    \end{minipage}
+
+    \vspace{1em} % Adds space between the pie charts
+
+    \begin{minipage}{\textwidth}
+        \textbf{Cons : Total 60 Responses}
+        \centering
+        \begin{tikzpicture}
+            \pie[text=legend, radius=1.25, color={red!70!white, orange!70!white, gray!50, purple!50, green!50, brown!50}, sum=62, style=drop shadow]{
+                12/Lack of Up-to-date Knowledge,
+                26/Reliability Concerns,
+                11/Contextual Understanding Challenges,
+                4/Dependence on Prompt,
+                7/Not Sufficient for Decision Making,
+                2/Biased on Training Data
+            }
+        \end{tikzpicture}
+    \end{minipage}
+
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}
+    \frametitle{Key Findings for RQ2}
+    \begin{itemize}
+        \item \textbf{Reliability Concerns:}
+        \begin{itemize}
+            \item Only a small percentage fully trust ChatGPT responses.
+            \item Majority consider the responses somewhat reliable but require validation.
+        \end{itemize}
+    \end{itemize}
+
+      % Define colors within the frame
+  \begin{tikzpicture}[scale=0.5, transform shape]
+    % Local color definitions
+    \definecolor{DeciderColor}{RGB}{102, 102, 238}    % Blue
+    \definecolor{ChallengerColor}{RGB}{119, 209, 243}  % Green
+    \definecolor{EnqColor}{RGB}{241, 230, 145}        % Orange
+    \definecolor{MixedColor}{RGB}{244, 182, 114}     % Purple
+    \definecolor{GreyColor}{RGB}{192, 192, 192}     % Grey for blurred slices
+
+    % Overlay 1: Highlight Decider
+    \only<1>{
+        \pie[
+      cloud,
+      text=legend,
+      scale font,
+      radius=3, % Increased radius for more space
+      % Optionally adjust font size
+      color={
+          DeciderColor,
+          ChallengerColor,
+          EnqColor,
+          MixedColor
+        },
+      font=\scriptsize
+    ]{
+      34/Unreliaable,
+      19.26/Over hyped,
+      2.74/Fully Reliable, % Abbreviated label
+      54/Somewhat Reliable
+    }
+    }
+    \only<2>{
+      \pie[
+        cloud,
+        text=legend,
+        scale font,
+        radius=3,
+        color={
+          DeciderColor,
+          GreyColor,
+          GreyColor,
+          GreyColor
+        },
+        font=\scriptsize
+      ]{
+        34/Unreliaable,
+        19.26/Over hyped,
+        2.74/Fully Reliable, % Abbreviated label
+        54/Somewhat Reliable
+      }
+    }
+
+    % Overlay 2: Highlight Challenger
+    \only<3>{
+      \pie[
+        cloud,
+        text=legend,
+        scale font,
+        radius=3,
+        color={
+          GreyColor,
+          ChallengerColor,
+          GreyColor,
+          GreyColor
+        },
+        font=\scriptsize
+      ]{
+        34/Unreliaable,
+        19.26/Over hyped,
+        2.74/Fully Reliable, % Abbreviated label
+        54/Somewhat Reliable
+      }
+    }
+
+    % Overlay 3: Highlight Enquirer
+    \only<4>{
+      \pie[
+        cloud,
+        text=legend,
+        scale font,
+        radius=3,
+        color={
+          GreyColor,
+          GreyColor,
+          EnqColor,
+          GreyColor
+        },
+        font=\scriptsize
+      ]{
+        34/Unreliaable,
+        19.26/Over hyped,
+        2.74/Fully Reliable, % Abbreviated label
+        54/Somewhat Reliable
+      }
+    }
+
+    % Overlay 4: Highlight Mixed
+    \only<5>{
+      \pie[
+        cloud,
+        text=legend,
+        scale font,
+        radius=3,
+        color={
+          GreyColor,
+          GreyColor,
+          GreyColor,
+          MixedColor
+        },
+        font=\scriptsize
+      ]{
+        34/Unreliaable,
+        19.26/Over hyped,
+        2.74/Fully Reliable, % Abbreviated label
+        54/Somewhat Reliable
+      }
+    }
+  \end{tikzpicture}
+\end{frame}
+
+%------------------------------------------------

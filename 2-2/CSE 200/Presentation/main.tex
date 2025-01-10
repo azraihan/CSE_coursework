@@ -1,0 +1,236 @@
+% Beamer Presentation Template
+% Version adjusted as per user's specifications
+
+\documentclass[
+    11pt,           % Default font size
+    % t,             % Align vertically to the top
+    %aspectratio=169 % Uncomment for 16:9 aspect ratio
+]{beamer}
+
+% Path for images
+\graphicspath{{img/}}
+
+% Additional packages
+\usepackage[alf]{abntex2cite} % ABNT citations
+\usepackage{booktabs}         % Enhanced table lines
+\usepackage{palatino}         % Palatino font
+\usepackage[default]{opensans}% Open Sans font
+\usepackage{subcaption}
+\input{config/code_langs}     % Code formatting
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{arrows, shapes, shapes.geometric, positioning, matrix, patterns, arrows.meta, calc, shadows}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=3cm, text centered, rounded corners, minimum height=1cm]
+\tikzstyle{line} = [draw, -latex', thick]
+% In main.tex preamble
+\usepackage{pgf-pie}      % For \pie command
+\usepackage{pgfplots}     % For \begin{axis} environment
+\pgfplotsset{compat=1.17} % Set compatibility level for pgfplots
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\usepackage{float}
+\usepackage{opensans}
+
+% Packages for graphics and charts
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{adjustbox} % For adjusting table sizes if needed
+
+% nafees' animation 
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+\usepackage{tcolorbox}  % Provides tcbitemize and advanced box formatting
+\usepackage{fontawesome5}  % For the \faTools icon
+% \usepackage{pgfplots} % For creating plots
+% \pgfplotsset{compat=1.18}
+%nafees ends
+
+
+% nafees' animation (25-32)
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
+\usepackage{array}
+
+%----------------------------------------------------------------------------------------
+%   LAYOUT AND COLOR SELECTION
+%----------------------------------------------------------------------------------------
+
+\usetheme{Boadilla} % Layout theme
+
+% Define custom colors
+\definecolor{primaryColor}{RGB}{20,45,105}     % Primary color
+\definecolor{secondaryColor}{RGB}{0,100,160}   % Secondary color
+\definecolor{footerBottomColor}{RGB}{15,75,130} % Footer bottom color (adjusted for visual appeal)
+% Define colors for correct and incorrect labels
+\definecolor{mygreen}{RGB}{34,139,34}
+\definecolor{myred}{RGB}{178,34,34}
+\definecolor{myblue}{RGB}{0,0,255}
+\definecolor{myorange}{RGB}{255,165,0}
+\definecolor{blue}{RGB}{31,119,180}
+\definecolor{red}{RGB}{214,39,40}
+\definecolor{green}{RGB}{44,160,44}
+\definecolor{orange}{RGB}{255,127,14}
+\definecolor{goldenrod}{rgb}{0.85, 0.65, 0.13} % RGB values for goldenrod
+
+
+% Apply colors to the theme
+\setbeamercolor{structure}{fg=primaryColor}
+\setbeamercolor{palette primary}{bg=primaryColor, fg=white}
+\setbeamercolor{palette secondary}{bg=secondaryColor, fg=white}
+\setbeamercolor{title}{bg=primaryColor, fg=white} % Main title color
+
+% Colors in the header
+\setbeamercolor{headline}{bg=secondaryColor, fg=white}
+\setbeamercolor{section in head/foot}{bg=primaryColor, fg=white}
+\setbeamercolor{subsection in head/foot}{bg=secondaryColor, fg=white}
+
+% Footer color configurations
+\setbeamercolor{author in head/foot}{bg=primaryColor, fg=white} % Left partition
+\setbeamercolor{institute in head/foot}{bg=secondaryColor, fg=white} % Right partition
+\setbeamercolor{title in head/foot}{bg=footerBottomColor, fg=white} % Bottom line
+
+% Inner and outer themes
+\useinnertheme{circles}   % Inner theme
+\useoutertheme{miniframes} % Outer theme
+
+%\setbeamertemplate{navigation symbols}{} % Remove navigation symbols (Commented out to enable them)
+
+% TikZ styles for flowcharts
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=primaryColor!20]
+\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, draw=black, fill=secondaryColor!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%------------------
+%   PRESENTATION INFORMATION
+%------------------
+
+% \title[ChatGPT Incorrectness Detection in Software Reviews]{ChatGPT Incorrectness Detection in Software Reviews}
+% \author[Nafis \textbar{} Nafees \textbar{} Raihan]{
+%     \textbf{Nafis Nahian} {\scriptsize \texttt{(2105007)}} \\ 
+%     \textbf{Sk. Ashrafuzzaman Nafees} {\scriptsize \texttt{(2105008)}} \\ 
+%     \textbf{Abrar Zahin Raihan} {\scriptsize \texttt{(2105009)}}
+% }
+% \institute[Bangladesh University of Engineering and Technology]{\textbf{Bangladesh University of Engineering and Technology} \\ \vspace{0.5em} \tiny{Department of Computer Science and Engineering}}
+% \date[Year]{\textbf{\today}}
+
+\title[ChatGPT Incorrectness Detection in Software Reviews]{ChatGPT Incorrectness Detection in Software Reviews}
+
+\author[Nafis \textbar{} Nafees \textbar{} Raihan]{
+    \noindent
+\begin{tabular}{p{0.45\linewidth}|>{\raggedleft\arraybackslash}p{0.45\linewidth}}
+    \textbf{\Large Authors} & \textbf{\Large Presented by} \\
+    \small Minaoar Hossain Tanzil & \small Nafis Nahian {\tiny \texttt{(2105007)}} \\
+    \small Junaed Younus Khan & \small Nafees Ashraf {\tiny \texttt{(2105008)}} \\
+    \small Gias Uddin & \small Abrar Zahin Raihan {\tiny \texttt{(2105009)}} \\
+\end{tabular}
+}
+
+\institute[Bangladesh University of Engineering and Technology]{\textbf{Bangladesh University of Engineering and Technology} \\ \vspace{0.5em} \tiny{Department of Computer Science and Engineering}}
+\date[Year]{\textbf{\today}}
+
+
+\institute[Bangladesh University of Engineering and Technology]{\textbf{Bangladesh University of Engineering and Technology} \\ \vspace{0.5em} \tiny{Department of Computer Science and Engineering}}
+\date[Year]{\textbf{\today}}
+
+
+%------------------
+%   ADD OUTLINE BEFORE EACH SECTION
+%------------------
+
+\AtBeginSection[]{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------
+%   CUSTOM FOOTER
+%------------------
+
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \vbox{%
+    % First line with partitions
+    \hbox{%
+      % Left partition (Your Name)
+      \begin{beamercolorbox}[wd=.475\paperwidth,ht=2.25ex,dp=1ex,leftskip=0.3cm,rightskip=0cm]{author in head/foot}%
+        \usebeamerfont{author in head/foot}%
+        \hspace*{0pt}\insertshortauthor%
+      \end{beamercolorbox}%
+      % Vertical separator
+      \begin{beamercolorbox}[wd=0pt,ht=2.25ex,dp=1ex]{separator}%
+        \hspace*{-0.2pt}%
+        \color{white}\vrule width 0.5pt%
+      \end{beamercolorbox}%
+      % Right partition (Your Institution)
+      \begin{beamercolorbox}[wd=.525\paperwidth,ht=2.25ex,dp=1ex,leftskip=0cm,rightskip=0.3cm]{institute in head/foot}%
+        \usebeamerfont{institute in head/foot}%
+        \hfill\insertshortinstitute%
+      \end{beamercolorbox}%
+    }%
+    % Second line without partitions
+    \hbox{%
+      \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,leftskip=0.3cm,rightskip=0.3cm]{title in head/foot}%
+        \usebeamerfont{title in head/foot}%
+        \hspace*{0pt}\insertshorttitle%
+        \hfill%
+        \insertframenumber{}/\inserttotalframenumber%
+      \end{beamercolorbox}%
+    }%
+  }%
+}
+
+
+
+%------------------
+
+\begin{document}
+
+%------------------
+%   TITLE SLIDE
+%------------------
+
+\begin{frame}
+    % \begin{figure}
+    %     \includegraphics[width=0.3\linewidth]{img/your_logo.png} % Add your logo here
+    % \end{figure}
+    \titlepage % Display the title slide
+\end{frame}
+
+%------------------
+%   TABLE OF CONTENTS SLIDE
+%------------------
+
+\begin{frame}
+    \frametitle{Presentation Outline} % Slide title
+    \tableofcontents % Display the table of contents
+\end{frame}
+
+%------------------
+%   PRESENTATION BODY SECTIONS
+%------------------
+
+\input{nn}
+%------------------------------------------------
+\input{nafees}
+%------------------------------------------------
+\input{raihan}
+%------------------
+
+\end{document}
