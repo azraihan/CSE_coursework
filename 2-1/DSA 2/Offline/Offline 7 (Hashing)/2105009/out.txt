@@ -1,0 +1,402 @@
+.....................TABLE SIZE 5000.....................
+
+.....................INSERTING.....................
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.22
+Old Max Chain Length: 4
+Old Probe Count: 1.09091
+
+New Load Factor: 0.11
+New Max Chain Length: 3
+New Probe Count: 1.01818
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.26
+Old Max Chain Length: 4
+Old Probe Count: 1
+
+New Load Factor: 0.13
+New Max Chain Length: 4
+New Probe Count: 1.09231
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.14
+Old Max Chain Length: 4
+Old Probe Count: 1.1087
+
+New Load Factor: 0.07
+New Max Chain Length: 4
+New Probe Count: 1.06897
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.075
+Old Max Chain Length: 4
+Old Probe Count: 1.06944
+
+New Load Factor: 0.0375
+New Max Chain Length: 3
+New Probe Count: 1.04545
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.19
+Old Max Chain Length: 4
+Old Probe Count: 1.02353
+
+New Load Factor: 0.095
+New Max Chain Length: 4
+New Probe Count: 1.02186
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.1
+Old Max Chain Length: 4
+Old Probe Count: 1.04292
+
+New Load Factor: 0.05
+New Max Chain Length: 2
+New Probe Count: 1.03753
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.055
+Old Max Chain Length: 4
+Old Probe Count: 1.05076
+
+New Load Factor: 0.0275
+New Max Chain Length: 4
+New Probe Count: 1.03887
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.02875
+Old Max Chain Length: 4
+Old Probe Count: 1.03522
+
+New Load Factor: 0.014375
+New Max Chain Length: 4
+New Probe Count: 1.02864
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.015
+Old Max Chain Length: 4
+Old Probe Count: 1.02744
+
+New Load Factor: 0.0075
+New Max Chain Length: 2
+New Probe Count: 1.02632
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.1125
+Old Max Chain Length: 4
+Old Probe Count: 1.0406
+
+New Load Factor: 0.05625
+New Max Chain Length: 3
+New Probe Count: 1.03075
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.11
+Old Max Chain Length: 4
+Old Probe Count: 1.029
+
+New Load Factor: 0.055
+New Max Chain Length: 3
+New Probe Count: 1.02376
+
+
+
+TABLE SIZE: 5000
+SEPERATE_CHAIN: 
+Table 1: # of collision = 879, Average probes = 1.02364
+Table 2: # of collision = 351, Average probes = 1.02531
+DOUBLE_HASHING: 
+Table 1: # of collision = 3907, Average probes = 1.38
+Table 2: # of collision = 3909, Average probes = 1.32
+CUSTOM_PROBING: 
+Table 1: # of collision = 3916, Average probes = 1.26
+Table 2: # of collision = 3898, Average probes = 1.2
+
+
+
+..............DELETING..............
+
+2 2.4
+Rehash Triggered (While Deleteing)
+Old Load Factor: 0.0254125
+Old Max Chain Length: 2
+Old Probe Count: 0.946118
+
+New Load Factor: 0.050825
+New Max Chain Length: 4
+New Probe Count: 0.963799
+
+
+
+.....................TABLE SIZE 10000.....................
+
+.....................INSERTING.....................
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.13
+Old Max Chain Length: 4
+Old Probe Count: 1.07692
+
+New Load Factor: 0.065
+New Max Chain Length: 4
+New Probe Count: 1.01538
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.07
+Old Max Chain Length: 4
+Old Probe Count: 1.04348
+
+New Load Factor: 0.035
+New Max Chain Length: 3
+New Probe Count: 1.03448
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.19
+Old Max Chain Length: 4
+Old Probe Count: 1.10526
+
+New Load Factor: 0.095
+New Max Chain Length: 4
+New Probe Count: 1.08421
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.1
+Old Max Chain Length: 4
+Old Probe Count: 1.06716
+
+New Load Factor: 0.05
+New Max Chain Length: 2
+New Probe Count: 1.03571
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.055
+Old Max Chain Length: 4
+Old Probe Count: 1.03139
+
+New Load Factor: 0.0275
+New Max Chain Length: 4
+New Probe Count: 1.02466
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.02875
+Old Max Chain Length: 4
+Old Probe Count: 1.02059
+
+New Load Factor: 0.014375
+New Max Chain Length: 4
+New Probe Count: 1.01435
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.015
+Old Max Chain Length: 4
+Old Probe Count: 1.01245
+
+New Load Factor: 0.0075
+New Max Chain Length: 2
+New Probe Count: 1.01142
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.1125
+Old Max Chain Length: 4
+Old Probe Count: 1.03869
+
+New Load Factor: 0.05625
+New Max Chain Length: 3
+New Probe Count: 1.03199
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.11
+Old Max Chain Length: 4
+Old Probe Count: 1.03133
+
+New Load Factor: 0.055
+New Max Chain Length: 3
+New Probe Count: 1.02488
+
+
+
+TABLE SIZE: 10000
+SEPERATE_CHAIN: 
+Table 1: # of collision = 820, Average probes = 1.0267
+Table 2: # of collision = 279, Average probes = 1.01035
+DOUBLE_HASHING: 
+Table 1: # of collision = 3443, Average probes = 1.46
+Table 2: # of collision = 3452, Average probes = 1.36
+CUSTOM_PROBING: 
+Table 1: # of collision = 3452, Average probes = 1.32
+Table 2: # of collision = 3446, Average probes = 1.42
+
+
+
+..............DELETING..............
+
+2 2.4
+Rehash Triggered (While Deleteing)
+Old Load Factor: 0.0368313
+Old Max Chain Length: 2
+Old Probe Count: 0.898964
+
+New Load Factor: 0.0736625
+New Max Chain Length: 4
+New Probe Count: 0.944278
+
+
+
+.....................TABLE SIZE 20000.....................
+
+.....................INSERTING.....................
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.065
+Old Max Chain Length: 4
+Old Probe Count: 1.15385
+
+New Load Factor: 0.0325
+New Max Chain Length: 3
+New Probe Count: 1.03077
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.095
+Old Max Chain Length: 4
+Old Probe Count: 1
+
+New Load Factor: 0.0475
+New Max Chain Length: 2
+New Probe Count: 1.02105
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.055
+Old Max Chain Length: 4
+Old Probe Count: 1.04
+
+New Load Factor: 0.0275
+New Max Chain Length: 4
+New Probe Count: 1.02804
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.02875
+Old Max Chain Length: 4
+Old Probe Count: 1.02574
+
+New Load Factor: 0.014375
+New Max Chain Length: 4
+New Probe Count: 1.03456
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.015
+Old Max Chain Length: 4
+Old Probe Count: 1.03488
+
+New Load Factor: 0.0075
+New Max Chain Length: 2
+New Probe Count: 1.02473
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.1125
+Old Max Chain Length: 4
+Old Probe Count: 1.01887
+
+New Load Factor: 0.05625
+New Max Chain Length: 3
+New Probe Count: 1.03448
+
+
+
+Rehash Triggered (While Inserting)
+Old Load Factor: 0.11
+Old Max Chain Length: 4
+Old Probe Count: 1.03781
+
+New Load Factor: 0.055
+New Max Chain Length: 3
+New Probe Count: 1.02379
+
+
+
+TABLE SIZE: 20000
+SEPERATE_CHAIN: 
+Table 1: # of collision = 713, Average probes = 1.02233
+Table 2: # of collision = 229, Average probes = 1.02155
+DOUBLE_HASHING: 
+Table 1: # of collision = 2560, Average probes = 1.44
+Table 2: # of collision = 2545, Average probes = 1.405
+CUSTOM_PROBING: 
+Table 1: # of collision = 2539, Average probes = 1.45
+Table 2: # of collision = 2545, Average probes = 1.38
+
+
+
+..............DELETING..............
+
+2 2.4
+Rehash Triggered (While Deleteing)
+Old Load Factor: 0.0189344
+Old Max Chain Length: 2
+Old Probe Count: 0.888545
+
+New Load Factor: 0.0378687
+New Max Chain Length: 4
+New Probe Count: 0.926724
+
+
+
+2 2.4
+Rehash Triggered (While Deleteing)
+Old Load Factor: -0.0010375
+Old Max Chain Length: 2
+Old Probe Count: 0.794215
+
+New Load Factor: -0.002075
+New Max Chain Length: 4
+New Probe Count: 0.830478
+
+
+
