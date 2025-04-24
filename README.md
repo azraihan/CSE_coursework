@@ -20,6 +20,6 @@ Course materials of all the sessional CSE courses I have taken till now.
 
 - [Level-3, Term-1](https://github.com/azraihan/CSE_coursework/tree/main/3-1)
   - [CSE 310: Compiler Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20310)
-  - [CSE 314: Microprocessors, Microcontrollers, and Embedded Systems Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20314)
-  - [CSE 316: Software Engineering Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20316)
+  - [CSE 314: Operating System Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20314)
+  - [CSE 316: Microprocessors, Microcontrollers, and Embedded Systems Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20316)
   - [CSE 318: Artificial Intelligence Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20318)
