@@ -1,0 +1,56 @@
+11      
+I     
+I car STRUCT INT n_doors BOOL is_electric STRING brand
+I car2 STRUCT INT n_doors BOOL is_electric STRING brand
+I car3 STRUCT INT n_doors BOOL is_electric STRING brand INT n_doors
+I random STRUCT INT a DOUBLE a FLOAT a 
+I car4 STRUCT
+I random STRUCT INT a DOUBLE  
+I foo DOUBLE
+I foo DOUBLE
+I foo
+I foo1 INT FLOAT
+I foo2 FUNCTION   INT INT FLOAT INT  
+I foo3 FUNCTION INT 
+I foo4 FUNCTION 
+In
+S  x
+S  
+I <= RELOP
+I ==   RELOP
+I    23 NUMBER
+
+P 
+P All
+P A C
+P C 
+P A 
+D ==
+I foo VAR
+D 23
+D
+P A
+L
+L foo
+D 
+D foo2 foo3 
+D foo
+D  foo
+L foo2 
+L A 
+L foo foo 
+L foo  
+S
+I bicycle1 UNION INT n_gears BOOL is_hydrolic_brake STRING brand INT n_gears
+I bicycle2 UNION
+I bicycle3 UNIONN
+I bicycle4 UNION INT n_gears BOOL is_hydrolic_brake STRING brand
+E 
+E 
+E 
+P A
+P A 
+Q x
+Q   
+I car STRUCT INT n_doors BOOL is_electric STRING brand
+

@@ -1,0 +1,18 @@
+Symbol Table Hash Function Performance Report
+===========================================
+Input File: testcases.txt
+Number of Buckets: 15
+-------------------------------------------
+
+Collision Counts:
+----------------
+Hash Function            Collisions
+-------------------------------------
+SDBM Hash                         3
+DJB2 Hash                         2
+FNV1a Hash                        4
+-------------------------------------
+
+Summary:
+--------
+Best Performing Hash Function: DJB2 Hash with 2 collisions.

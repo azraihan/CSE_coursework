@@ -1,0 +1,186 @@
+	ScopeTable# 1 created
+Cmd 1: I
+	Number of parameters mismatch for the command I
+Cmd 2: I car STRUCT INT n_doors BOOL is_electric STRING brand
+	Inserted in ScopeTable# 1 at position 4, 1
+Cmd 3: I car2 STRUCT INT n_doors BOOL is_electric STRING brand
+	Inserted in ScopeTable# 1 at position 3, 1
+Cmd 4: I car3 STRUCT INT n_doors BOOL is_electric STRING brand INT n_doors
+	Duplicate Parameters are not allowed
+Cmd 5: I random STRUCT INT a DOUBLE a FLOAT a
+	Duplicate Parameters are not allowed
+Cmd 6: I car4 STRUCT
+	Number of parameters mismatch for the command I
+Cmd 7: I random STRUCT INT a DOUBLE
+	Number of parameters mismatch for the command I
+Cmd 8: I foo DOUBLE
+	Inserted in ScopeTable# 1 at position 6, 1
+Cmd 9: I foo DOUBLE
+	'foo' already exists in the current ScopeTable
+Cmd 10: I foo
+	Number of parameters mismatch for the command I
+Cmd 11: I foo1 INT FLOAT
+	Number of parameters mismatch for the command I
+Cmd 12: I foo2 FUNCTION   INT INT FLOAT INT
+	Inserted in ScopeTable# 1 at position 4, 2
+Cmd 13: I foo3 FUNCTION INT
+	Inserted in ScopeTable# 1 at position 5, 1
+Cmd 14: I foo4 FUNCTION
+	Inserted in ScopeTable# 1 at position 6, 2
+Cmd 15: In
+	Unknown command In
+Cmd 16: S  x
+	Number of parameters mismatch for the command S
+Cmd 17: S
+	ScopeTable# 2 created
+Cmd 18: I <= RELOP
+	Inserted in ScopeTable# 2 at position 4, 1
+Cmd 19: I ==   RELOP
+	Inserted in ScopeTable# 2 at position 10, 1
+Cmd 20: I    23 NUMBER
+	Inserted in ScopeTable# 2 at position 11, 1
+Cmd 21: 
+	Unknown command 
+Cmd 22: P
+	Number of parameters mismatch for the command P
+Cmd 23: P All
+	P command must be “P A” or “P C”
+Cmd 24: P A C
+	Number of parameters mismatch for the command P
+Cmd 25: P C
+	ScopeTable# 2
+	1--> 
+	2--> 
+	3--> 
+	4--> <<=,RELOP> 
+	5--> 
+	6--> 
+	7--> 
+	8--> 
+	9--> 
+	10--> <==,RELOP> 
+	11--> <23,NUMBER> 
+Cmd 26: P A
+	ScopeTable# 2
+	1--> 
+	2--> 
+	3--> 
+	4--> <<=,RELOP> 
+	5--> 
+	6--> 
+	7--> 
+	8--> 
+	9--> 
+	10--> <==,RELOP> 
+	11--> <23,NUMBER> 
+		ScopeTable# 1
+		1--> 
+		2--> 
+		3--> <car2,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> 
+		4--> <car,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> <foo2,FUNCTION,INT<==(INT,FLOAT,INT)> 
+		5--> <foo3,FUNCTION,INT<==()> 
+		6--> <foo,DOUBLE> <foo4,FUNCTION,<==()> 
+		7--> 
+		8--> 
+		9--> 
+		10--> 
+		11--> 
+Cmd 27: D ==
+	Deleted '==' from ScopeTable# 2 at position 10, 1
+Cmd 28: I foo VAR
+	Inserted in ScopeTable# 2 at position 6, 1
+Cmd 29: D 23
+	Deleted '23' from ScopeTable# 2 at position 11, 1
+Cmd 30: D
+	Number of parameters mismatch for the command D
+Cmd 31: P A
+	ScopeTable# 2
+	1--> 
+	2--> 
+	3--> 
+	4--> <<=,RELOP> 
+	5--> 
+	6--> <foo,VAR> 
+	7--> 
+	8--> 
+	9--> 
+	10--> 
+	11--> 
+		ScopeTable# 1
+		1--> 
+		2--> 
+		3--> <car2,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> 
+		4--> <car,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> <foo2,FUNCTION,INT<==(INT,FLOAT,INT)> 
+		5--> <foo3,FUNCTION,INT<==()> 
+		6--> <foo,DOUBLE> <foo4,FUNCTION,<==()> 
+		7--> 
+		8--> 
+		9--> 
+		10--> 
+		11--> 
+Cmd 32: L
+	Number of parameters mismatch for the command L
+Cmd 33: L foo
+	'foo' found in ScopeTable# 2 at position 6, 1
+Cmd 34: D
+	Number of parameters mismatch for the command D
+Cmd 35: D foo2 foo3
+	Number of parameters mismatch for the command D
+Cmd 36: D foo
+	Deleted 'foo' from ScopeTable# 2 at position 6, 1
+Cmd 37: D  foo
+	Not found in the current ScopeTable
+Cmd 38: L foo2
+	'foo2' found in ScopeTable# 1 at position 4, 2
+Cmd 39: L A
+	'A' not found in any of the ScopeTables
+Cmd 40: L foo foo
+	Number of parameters mismatch for the command L
+Cmd 41: L foo
+	'foo' found in ScopeTable# 1 at position 6, 1
+Cmd 42: S
+	ScopeTable# 3 created
+Cmd 43: I bicycle1 UNION INT n_gears BOOL is_hydrolic_brake STRING brand INT n_gears
+	Duplicate Parameters are not allowed
+Cmd 44: I bicycle2 UNION
+	Number of parameters mismatch for the command I
+Cmd 45: I bicycle3 UNIONN
+	Inserted in ScopeTable# 3 at position 3, 1
+Cmd 46: I bicycle4 UNION INT n_gears BOOL is_hydrolic_brake STRING brand
+	Inserted in ScopeTable# 3 at position 4, 1
+Cmd 47: E
+	ScopeTable# 3 removed
+Cmd 48: E
+	ScopeTable# 2 removed
+Cmd 49: E
+	Can't Remove the Main Scope Table
+Cmd 50: P A
+	ScopeTable# 1
+	1--> 
+	2--> 
+	3--> <car2,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> 
+	4--> <car,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> <foo2,FUNCTION,INT<==(INT,FLOAT,INT)> 
+	5--> <foo3,FUNCTION,INT<==()> 
+	6--> <foo,DOUBLE> <foo4,FUNCTION,<==()> 
+	7--> 
+	8--> 
+	9--> 
+	10--> 
+	11--> 
+Cmd 51: P A
+	ScopeTable# 1
+	1--> 
+	2--> 
+	3--> <car2,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> 
+	4--> <car,STRUCT,{(INT,n_doors),(BOOL,is_electric),(STRING,brand)}> <foo2,FUNCTION,INT<==(INT,FLOAT,INT)> 
+	5--> <foo3,FUNCTION,INT<==()> 
+	6--> <foo,DOUBLE> <foo4,FUNCTION,<==()> 
+	7--> 
+	8--> 
+	9--> 
+	10--> 
+	11--> 
+Cmd 52: Q x
+	Number of parameters mismatch for the command Q
+Cmd 53: Q
+	ScopeTable# 1 removed

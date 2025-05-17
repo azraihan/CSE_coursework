@@ -1,0 +1,273 @@
+I alpha VAR
+I beta VAR
+I gamma FUNCTION VOID INT FLOAT
+I MyStruct STRUCT INT id STRING name
+I MyUnion UNION FLOAT x BOOL valid
+I theta VAR
+I omega VAR
+I sin FUNCTION FLOAT FLOAT
+L omega
+L beta
+D alpha
+L theta
+S
+I comp1 STRUCT INT count BOOL flag
+I delta VAR
+L delta
+D delta
+E
+S
+I score VAR
+I user STRUCT STRING username STRING password
+L user
+D user
+P C
+S
+I math FUNCTION INT INT
+I matrix VAR
+L math
+D matrix
+E
+I light VAR
+I color STRUCT INT r INT g INT b
+L color
+D light
+S
+I pos VAR
+L pos
+E
+S
+I car1 STRUCT STRING model INT year
+I brandName VAR
+L car1
+P A
+D brandName
+E
+S
+I power VAR
+I voltage VAR
+D power
+D voltage
+P A
+I login FUNCTION BOOL STRING STRING
+L login
+S
+I temperature VAR
+I humidity VAR
+D humidity
+E
+E
+S
+I item STRUCT STRING name FLOAT price
+I quantity VAR
+D item
+L quantity
+E
+S
+I config STRUCT BOOL enabled INT timeout
+I path VAR
+P A
+E
+S
+I name VAR
+I status VAR
+L status
+D name
+E
+S
+I signal VAR
+I range VAR
+D signal
+P A
+E
+S
+I type1 VAR
+I type2 VAR
+I idNumber VAR
+D type1
+D idNumber
+E
+S
+I myFunc FUNCTION VOID
+L myFunc
+E
+S
+I true_val BOOL
+I false_val BOOL
+L false_val
+E
+S
+I student STRUCT INT roll STRING name
+I marks VAR
+D marks
+E
+S
+I boolCheck FUNCTION BOOL
+I exec VAR
+D exec
+E
+S
+I retry_count VAR
+I max_limit VAR
+L max_limit
+E
+S
+I db STRUCT STRING host INT port
+I db_conn VAR
+D db
+P C
+E
+S
+I apiCall FUNCTION VOID STRING
+I token VAR
+L apiCall
+E
+S
+I lval VAR
+I rval VAR
+L rval
+E
+S
+I widget STRUCT STRING id STRING type
+I container VAR
+D container
+E
+S
+I threshold VAR
+I max_val VAR
+L max_val
+E
+S
+I timer VAR
+I counter VAR
+D counter
+E
+S
+I key VAR
+I value VAR
+L key
+D key
+E
+S
+I phone STRUCT INT code STRING number
+I address VAR
+D phone
+E
+S
+I x1 VAR
+I y1 VAR
+D x1
+L y1
+E
+S
+I z VAR
+I a1 VAR
+L z
+E
+S
+I b2 VAR
+I c3 VAR
+D c3
+E
+S
+I someFunc FUNCTION FLOAT
+I anotherFunc FUNCTION INT FLOAT
+L anotherFunc
+E
+S
+I net STRUCT STRING ip INT mask
+I network VAR
+L network
+D network
+E
+S
+I graph STRUCT INT nodes INT edges
+I tree STRUCT INT height INT leaves
+L tree
+E
+S
+I userId VAR
+I session VAR
+L session
+E
+S
+I json STRUCT STRING key STRING value
+I xml STRUCT STRING tag STRING attr
+D json
+D xml
+E
+S
+I m1 VAR
+I m2 VAR
+D m1
+D m2
+E
+S
+I game STRUCT STRING name INT level
+I console VAR
+P A
+E
+S
+I funcA FUNCTION VOID
+I funcB FUNCTION VOID INT
+L funcA
+E
+S
+I opt1 BOOL
+I opt2 BOOL
+D opt1
+L opt2
+E
+S
+I a VAR
+I b VAR
+D a
+D b
+E
+S
+I p1 VAR
+I p2 VAR
+L p1
+E
+S
+I q1 VAR
+I q2 VAR
+L q2
+E
+S
+I lang STRUCT STRING name INT version
+I editor STRUCT STRING name BOOL supports_plugins
+L lang
+E
+S
+I comp VAR
+I sys STRUCT STRING os STRING arch
+D sys
+E
+S
+I retry VAR
+I attempt VAR
+L attempt
+D retry
+E
+S
+I pixel STRUCT INT x INT y
+I colorCode VAR
+P A
+E
+S
+I sensor STRUCT STRING type INT id
+I actuator STRUCT STRING type INT id
+L actuator
+E
+S
+I en VAR
+I de VAR
+D en
+L de
+E
+S
+I L1 VAR
+I L2 VAR
+L L2
+E
