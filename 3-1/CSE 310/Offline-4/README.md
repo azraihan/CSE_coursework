@@ -57,6 +57,9 @@ This assignment extends the previous syntax/semantic analyzer to generate execut
 
 Requires ANTLR4. See the [installation guide](https://github.com/azraihan/CSE_coursework/blob/main/3-1/CSE%20310/Offline-3/Getting_Started_with_ANTLR4.pdf).
 
+## Requirements To Run the Assembly Code:
+The generated assembly code must run on the [EMU 8086](https://emu8086-microprocessor-emulator.en.download.it/) emulator.
+
 ## Usage
 
 ### Compile C to Assembly
