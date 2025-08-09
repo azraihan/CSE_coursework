@@ -1,0 +1,75 @@
+Intelligence Staff 2 began reviewing logbook at time 1. Operations completed = 0
+Intelligence Staff 1 began reviewing logbook at time 5. Operations completed = 0
+Operative 10 has arrived at typewriting station 3 at time 5
+Operative 10 has started document recreation at typewriting station 3 at time 5
+Operative 7 has arrived at typewriting station 4 at time 6
+Operative 7 has started document recreation at typewriting station 4 at time 6
+Operative 8 has arrived at typewriting station 1 at time 6
+Operative 8 has started document recreation at typewriting station 1 at time 6
+Intelligence Staff 2 began reviewing logbook at time 7. Operations completed = 0
+Operative 15 has arrived at typewriting station 4 at time 7
+Operative 15 has started document recreation at typewriting station 4 at time 7
+Operative 10 has completed document recreation at typewriting station 3 at time 9
+Notifying all: Typewriting station 3 is now available
+Unit 2(Group leader: 10) has completed document recreation phase at time 9
+Operative 6 has arrived at typewriting station 3 at time 11
+Operative 6 has started document recreation at typewriting station 3 at time 11
+Operative 5 has arrived at typewriting station 2 at time 11
+Operative 5 has started document recreation at typewriting station 2 at time 11
+Intelligence Staff 1 began reviewing logbook at time 11. Operations completed = 0
+Operative 14 has arrived at typewriting station 3 at time 11
+Operative 14 has started document recreation at typewriting station 3 at time 11
+Operative 11 has arrived at typewriting station 4 at time 14
+Operative 12 has arrived at typewriting station 1 at time 14
+Operative 12 has started document recreation at typewriting station 1 at time 14
+Operative -1 has arrived at typewriting station 0 at time 14
+Operative -1 has started document recreation at typewriting station 0 at time 15
+Operative 4 has arrived at typewriting station 1 at time 14
+Operative 4 has started document recreation at typewriting station 1 at time 15
+Operative 3 has arrived at typewriting station 4 at time 14
+Operative 3 has started document recreation at typewriting station 4 at time 15
+Operative 11 has started document recreation at typewriting station 4 at time 14
+Operative 15 has completed document recreation at typewriting station 4 at time 15
+Notifying all: Typewriting station 4 is now available
+Unit 3(Group leader: 15) has completed document recreation phase at time 15
+Operative 2 has arrived at typewriting station 3 at time 15
+Operative 2 has started document recreation at typewriting station 3 at time 15
+Operative 9 has arrived at typewriting station 2 at time 15
+Operative 9 has started document recreation at typewriting station 2 at time 15
+Operative 4 has completed document recreation at typewriting station 1 at time 17
+Notifying all: Typewriting station 1 is now available
+Operative 13 has arrived at typewriting station 2 at time 17
+Operative 13 has started document recreation at typewriting station 2 at time 17
+Operative 7 has completed document recreation at typewriting station 4 at time 17
+Notifying all: Typewriting station 4 is now available
+Operative 8 has completed document recreation at typewriting station 1 at time 17
+Notifying all: Typewriting station 1 is now available
+Operative 9 has completed document recreation at typewriting station 2 at time 18
+Notifying all: Typewriting station 2 is now available
+Unit 2(Group leader: 10) has completed intelligence distribution at time 19
+Operative 12 has completed document recreation at typewriting station 1 at time 20
+Notifying all: Typewriting station 1 is now available
+Operative 6 has completed document recreation at typewriting station 3 at time 20
+Notifying all: Typewriting station 3 is now available
+Operative 5 has completed document recreation at typewriting station 2 at time 21
+Notifying all: Typewriting station 2 is now available
+Operative 14 has completed document recreation at typewriting station 3 at time 21
+Notifying all: Typewriting station 3 is now available
+Unit 1(Group leader: 5) has completed document recreation phase at time 21
+Unit 3(Group leader: 15) has completed intelligence distribution at time 22
+Operative 3 has completed document recreation at typewriting station 4 at time 22
+Intelligence Staff 1 began reviewing logbook at time 22. Operations completed = 2
+Notifying all: Typewriting station 4 is now available
+Intelligence Staff 2 began reviewing logbook at time 22. Operations completed = 2
+Operative 11 has completed document recreation at typewriting station 4 at time 23
+Notifying all: Typewriting station 4 is now available
+Operative 13 has completed document recreation at typewriting station 2 at time 25
+Notifying all: Typewriting station 2 is now available
+Operative -1 has completed document recreation at typewriting station 0 at time 26
+Notifying all: Typewriting station 0 is now available
+Operative 2 has completed document recreation at typewriting station 3 at time 28
+Notifying all: Typewriting station 3 is now available
+Unit 1(Group leader: 5) has completed intelligence distribution at time 30
+Intelligence Staff 2 began reviewing logbook at time 30. Operations completed = 3
+Intelligence Staff 1 began reviewing logbook at time 30. Operations completed = 3
+All operatives have completed document recreation phase
