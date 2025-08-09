@@ -10,7 +10,9 @@ git clone https://github.com/mit-pdos/xv6-riscv
 
 ```bash
 git apply --whitespace=fix <patch file name> 
-#e.g.: (put the patch file in the same directory as the xv6 directory)
+```
+e.g.: (put the patch file in the same directory as the xv6 directory)
+```bash
 cd xv6-riscv
 git apply --whitespace=fix 2105009.patch
 ```
