@@ -1,0 +1,32 @@
+DECISION TREE ANALYSIS - KEY INSIGHTS REPORT
+==================================================
+
+1. BEST OVERALL PERFORMANCE:
+   Iris:  IGR at depth 4 - 0.9583 accuracy
+   Adult: IGR at depth 4 - 0.8577 accuracy
+
+2. CONSISTENCY ANALYSIS (Average Std Dev):
+   IG: Iris=0.0359, Adult=0.0323
+   IGR: Iris=0.0393, Adult=0.3202
+   NWIG: Iris=0.0335, Adult=0.0232
+
+3. OVERFITTING PATTERNS:
+   Iris Dataset:
+     IG: Shows overfitting (peak: 0.9567, final: 0.9333)
+     IGR: Shows overfitting (peak: 0.9583, final: 0.9350)
+     NWIG: No clear overfitting pattern
+
+   Adult Dataset:
+     IG: Shows overfitting (peak: 0.8315, final: 0.7298)
+     IGR: Shows overfitting (peak: 0.8577, final: 0.7242)
+     NWIG: Shows overfitting (peak: 0.8348, final: 0.7404)
+
+4. TREE COMPLEXITY INSIGHTS:
+   Iris: Correlation between nodes and accuracy = 0.6038
+   Adult: Correlation between nodes and accuracy = -0.7646
+
+5. RECOMMENDATIONS:
+   - Compare criteria performance across different depths
+   - Consider the trade-off between accuracy and model complexity
+   - Pay attention to consistency (lower std dev = more reliable)
+   - Watch for overfitting patterns in deeper trees
