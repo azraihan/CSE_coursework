@@ -1,4 +1,4 @@
-# CSE 310 Offline-4: Intermediate Code Generation
+# Intermediate Code Generation (ICG)
 
 A complete C-to-8086 Assembly compiler that translates C programs into optimized x86 assembly code with comprehensive code generation and optimization.
 
