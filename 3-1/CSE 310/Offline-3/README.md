@@ -17,7 +17,7 @@ The output will be found in the `output/` directory:
 - `lexerLog.txt`
 - `parserLog.txt`
 
-### Cleaning the outputs
+### Cleaning The Outputs
 
 ```bash
 bash clean-script.sh
