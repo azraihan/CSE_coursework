@@ -23,3 +23,8 @@ Course materials of all the sessional CSE courses I have taken till now.
   - [CSE 314: Operating System Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20314)
   - [CSE 316: Microprocessors, Microcontrollers, and Embedded Systems Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20316)
   - [CSE 318: Artificial Intelligence Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-1/CSE%20318)
+
+- [Level-3, Term-2](https://github.com/azraihan/CSE_coursework/tree/main/3-2)
+  - [CSE 322: Computer Networks Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-2/CSE%20322)
+  - [CSE 326: Information System Design Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-2/CSE%20326)
+  - [CSE 330: Machine Learning Sessional](https://github.com/azraihan/CSE_coursework/tree/main/3-2/CSE%20330)
